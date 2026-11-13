@@ -1,0 +1,49 @@
+:root { --fg: #111; --sub: #555; --rule: #ccc; --bg: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif; line-height: 1.85; letter-spacing: 0.03em; }
+a { color: inherit; }
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+h1 { font-weight: 700; line-height: 1.4; margin: 0; }
+.kicker { font-size: 0.85rem; color: var(--sub); margin: 0 0 4px; }
+
+.home h1 { font-size: 2.2rem; letter-spacing: 0.1em; margin-bottom: 24px; }
+.home .lead { font-size: 1.25rem; font-weight: 500; }
+.list { list-style: none; padding: 0; margin: 40px 0 0; border-top: 1px solid var(--fg); }
+.list li { border-bottom: 1px solid var(--rule); }
+.list a { display: grid; grid-template-columns: 96px 1fr; grid-template-rows: auto auto auto; column-gap: 16px; padding: 16px 0; text-decoration: none; }
+.list img { grid-row: 1 / 4; width: 96px; height: 96px; object-fit: cover; }
+.list .no { font-size: 0.8rem; color: var(--sub); }
+.list .s { font-weight: 700; font-size: 1.1rem; }
+.list .p { font-size: 0.9rem; color: var(--sub); }
+.foot { margin-top: 40px; font-size: 0.9rem; }
+
+.back { margin: 0 0 16px; font-size: 0.9rem; }
+.back a { text-decoration: none; }
+.painting { width: 100%; height: auto; display: block; }
+.player { margin: 28px 0; padding-bottom: 24px; border-bottom: 1px solid var(--fg); }
+.player h1 { font-size: 1.6rem; }
+.player .by { font-size: 0.9rem; color: var(--sub); margin: 4px 0 16px; }
+.player audio { width: 100%; }
+.missing { color: var(--sub); font-size: 0.9rem; }
+.label p { margin: 0 0 12px; }
+.label span { font-size: 0.85rem; color: var(--sub); }
+.label .title { font-size: 1.25rem; font-weight: 700; }
+.label .title span { font-weight: 400; font-style: italic; }
+.label .meta { font-size: 0.9rem; }
+.concept { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--rule); }
+.concept p { margin: 0 0 1.2em; }
+.next { margin-top: 32px; font-size: 0.95rem; }
+
+.qr { max-width: none; }
+#grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.card { border: 1px solid var(--rule); padding: 16px; }
+.card .code img, .card .code canvas { width: 60mm !important; height: 60mm !important; }
+.card .txt { margin-top: 8px; font-size: 11pt; line-height: 1.6; }
+.card .txt span { font-size: 8pt; color: var(--sub); word-break: break-all; }
+@media print {
+  @page { size: A4; margin: 0; }
+  .noprint { display: none; }
+  .qr { padding: 15mm; }
+  #grid { gap: 10mm; }
+  .card { height: 128mm; break-inside: avoid; }
+}

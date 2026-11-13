@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QRコード｜絵画を聴く</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="qr">
+  <p class="noprint">このページは、サイトを公開したあとに開いて印刷します（command + P、A4、余白なし）。QRコードは、いま開いているサイトの住所から作ります。</p>
+  <div id="grid"></div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  var W = [{"slug": "01-moonlight", "song": "月の光", "artist": "クロード・モネ", "title": "月光の下の船"}, {"slug": "02-arabesque", "song": "2つのアラベスク 第1番", "artist": "フィンセント・ファン・ゴッホ", "title": "星月夜"}, {"slug": "03-bruyeres", "song": "ヒースの茂る荒れ地", "artist": "フィンセント・ファン・ゴッホ", "title": "手押し車のある風景"}, {"slug": "04-la-fille", "song": "亜麻色の髪の乙女", "artist": "クロード・モネ", "title": "ひなげしの畑(アルジャントゥイユ近郊)"}];
+  var base = location.href.replace(/qr\.html.*$/, '');
+  var grid = document.getElementById('grid');
+  W.forEach(function (w) {
+    var c = document.createElement('div'); c.className = 'card';
+    var q = document.createElement('div'); q.className = 'code'; c.appendChild(q);
+    var t = document.createElement('div'); t.className = 'txt';
+    t.innerHTML = '<b>「' + w.song + '」</b><br>' + w.artist + '《' + w.title + '》<br><span>' + base + w.slug + '/</span>';
+    c.appendChild(t); grid.appendChild(c);
+    new QRCode(q, { text: base + w.slug + '/', width: 400, height: 400, correctLevel: QRCode.CorrectLevel.M });
+  });
+</script>
+</body>
+</html>
