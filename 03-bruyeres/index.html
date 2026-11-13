@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ヒースの茂る荒れ地｜絵画を聴く</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="work">
+  <p class="back"><a href="../">絵画を聴く</a></p>
+  <img class="painting" src="../images/03-bruyeres.jpg" alt="フィンセント・ファン・ゴッホ《手押し車のある風景》">
+  <section class="player">
+    <p class="kicker">音楽</p>
+    <h1>「ヒースの茂る荒れ地」（前奏曲集 第2集 第5曲）</h1>
+    <p class="by">クロード・ドビュッシー　編曲：金子淳平</p>
+    <audio controls preload="metadata" src="../audio/03-bruyeres.mp3"></audio>
+    <p class="missing" hidden>音源はまだ置かれていません。</p>
+  </section>
+  <section class="label">
+    <p class="artist">フィンセント・ファン・ゴッホ<br><span>Vincent van Gogh　1853–1890</span></p>
+    <p class="title">《手押し車のある風景》<br><span>Landscape with Wheelbarrow</span></p>
+    <p class="meta">1883年<br>水彩、不透明水彩、黒チョーク、紙<br>24.9 × 35.7 cm<br>クリーヴランド美術館（1958.30）</p>
+  </section>
+  <section class="concept">
+    <p class="kicker">編曲のコンセプト</p>
+    <p>ドビュッシーの《ヒースの茂る荒れ地》(1911年末〜1913年初めに作曲)は、題が楽譜の最後に、脚注のように添えられている。音楽が先にあり、題は最後にそっと置かれることで、荒野の風景は、音の向こうに静かに広がる、とも読める。この曲には、開けた野原のような空気がある。</p><p>そう読むと、ゴッホが1883年に描いた《手押し車のある風景》が重なる。この年の9月、ゴッホは都市のハーグを離れ、オランダ北東部のドレンテへ移った。産業革命の影響がほとんど及んでいない地域で、ゴッホは、この荒涼とした土地を、穏やかな場所と捉えた。絵の広がりには、手押し車がひとつ置かれているだけである。人の気配が少ない、開けた広がりという点で、曲と絵が重なる。</p><p>広大な風景は、音や絵からも想像できる。想像しているうちに、気持ちが開けていくような空気が生まれる。そんな空気を感じるような編曲にしたい。</p>
+  </section>
+  <nav class="next"><a href="../04-la-fille/">次の曲：亜麻色の髪の乙女</a></nav>
+</main>
+<script>
+  var a = document.querySelector('audio');
+  a.addEventListener('error', function () { a.hidden = true; document.querySelector('.missing').hidden = false; });
+</script>
+</body>
+</html>

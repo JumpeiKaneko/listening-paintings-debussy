@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>亜麻色の髪の乙女｜絵画を聴く</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="work">
+  <p class="back"><a href="../">絵画を聴く</a></p>
+  <img class="painting" src="../images/04-la-fille.jpg" alt="クロード・モネ《ひなげしの畑(アルジャントゥイユ近郊)》">
+  <section class="player">
+    <p class="kicker">音楽</p>
+    <h1>「亜麻色の髪の乙女」（前奏曲集 第1集 第8曲）</h1>
+    <p class="by">クロード・ドビュッシー　編曲：金子淳平</p>
+    <audio controls preload="metadata" src="../audio/04-la-fille.mp3"></audio>
+    <p class="missing" hidden>音源はまだ置かれていません。</p>
+  </section>
+  <section class="label">
+    <p class="artist">クロード・モネ<br><span>Claude Monet　1840–1926</span></p>
+    <p class="title">《ひなげしの畑(アルジャントゥイユ近郊)》<br><span>Poppy Field</span></p>
+    <p class="meta">1873年<br>油彩、カンヴァス<br>50 × 65 cm<br>オルセー美術館</p>
+  </section>
+  <section class="concept">
+    <p class="kicker">編曲のコンセプト</p>
+    <p>ドビュッシーの《亜麻色の髪の乙女》(前奏曲集第1集、1910年完成)は、ルコント・ド・リールの詩(1852年)から題をとっている。この詩の舞台は、夏の朝の花盛りの野原で、金色の髪の少女が歌っている。少女は、当時のロマン派や印象派にとって遠く異国的な、スコットランドの人である。詩は、遠い土地の野原を、想像して描いている、とも読める。</p><p>そう読むと、モネが1873年に描いた《ひなげしの畑(アルジャントゥイユ近郊)》が重なる。この絵は、パリ近郊のアルジャントゥイユの夏の野原を、ひなげしの赤とともに描いている。前景の日傘の女性は、モネの妻カミーユとみられ、子どもは息子のジャンとされる。詩のなかで想像された野原と、画家が目の前で見た野原が、夏の花の野原に立つ人として重なる。</p><p>詩の語り手が少女に思いを寄せることも、画家が家族を描くことも、誰かを思う気持ちが元になっている。その思いは、愛と呼べるものかもしれない。この編曲では、誰かを思う気持ちや愛おしさを、大切にしたい。</p>
+  </section>
+  <nav class="next"><a href="../">一覧へ</a></nav>
+</main>
+<script>
+  var a = document.querySelector('audio');
+  a.addEventListener('error', function () { a.hidden = true; document.querySelector('.missing').hidden = false; });
+</script>
+</body>
+</html>
