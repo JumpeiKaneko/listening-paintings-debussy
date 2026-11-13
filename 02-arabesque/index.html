@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2つのアラベスク 第1番｜絵画を聴く</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="work">
+  <p class="back"><a href="../">絵画を聴く</a></p>
+  <img class="painting" src="../images/02-arabesque.jpg" alt="フィンセント・ファン・ゴッホ《星月夜》">
+  <section class="player">
+    <p class="kicker">音楽</p>
+    <h1>「2つのアラベスク 第1番」</h1>
+    <p class="by">クロード・ドビュッシー　編曲：金子淳平</p>
+    <audio controls preload="metadata" src="../audio/02-arabesque.mp3"></audio>
+    <p class="missing" hidden>音源はまだ置かれていません。</p>
+  </section>
+  <section class="label">
+    <p class="artist">フィンセント・ファン・ゴッホ<br><span>Vincent van Gogh　1853–1890</span></p>
+    <p class="title">《星月夜》<br><span>The Starry Night</span></p>
+    <p class="meta">1889年<br>油彩、カンヴァス<br>73.7 × 92.1 cm<br>ニューヨーク近代美術館</p>
+  </section>
+  <section class="concept">
+    <p class="kicker">編曲のコンセプト</p>
+    <p>ドビュッシーの《アラベスク第1番》(1888〜91年)の「アラベスク」は、装飾的な旋律線を指す言葉である。ドビュッシーは、これを自然に沿ってしなやかに曲がっていく線と考えていた。この曲の旋律は、自然のうねりを、音の線として引いたものとも読める。</p><p>そう読むと、ほぼ同じ時期の1889年にゴッホが描いた《星月夜》が重なる。この絵の空は、渦を巻く線でできている。ゴッホは、療養所の窓からの眺めに想像を重ね、村を別の景色から持ち込み、糸杉や星の形を変えた。自然の動きを、自分の線として引き直している。曲も絵も、自然の動きを、線にして見せている。</p><p>アラベスクの線は耳で追う線であり、ゴッホの渦は目で追う線である。二つの線を重ねると、視覚と聴覚という異なる感覚に、共通するかたちが見えてくる。この編曲では、音で線を描きながら、二つの感覚が交差する地点を見つけたい。</p>
+  </section>
+  <nav class="next"><a href="../03-bruyeres/">次の曲：ヒースの茂る荒れ地</a></nav>
+</main>
+<script>
+  var a = document.querySelector('audio');
+  a.addEventListener('error', function () { a.hidden = true; document.querySelector('.missing').hidden = false; });
+</script>
+</body>
+</html>

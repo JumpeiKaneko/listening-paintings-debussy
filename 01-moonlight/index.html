@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>月の光｜絵画を聴く</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="work">
+  <p class="back"><a href="../">絵画を聴く</a></p>
+  <img class="painting" src="../images/01-moonlight.jpg" alt="クロード・モネ《月光の下の船》">
+  <section class="player">
+    <p class="kicker">音楽</p>
+    <h1>「月の光」（ベルガマスク組曲 第3曲）</h1>
+    <p class="by">クロード・ドビュッシー　編曲：金子淳平</p>
+    <audio controls preload="metadata" src="../audio/01-moonlight.mp3"></audio>
+    <p class="missing" hidden>音源はまだ置かれていません。</p>
+  </section>
+  <section class="label">
+    <p class="artist">クロード・モネ<br><span>Claude Monet　1840–1926</span></p>
+    <p class="title">《月光の下の船》<br><span>A Seascape, Shipping by Moonlight</span></p>
+    <p class="meta">1864年頃<br>油彩、カンヴァス<br>60.0 × 73.8 cm<br>スコットランド国立美術館（NG 2399）</p>
+  </section>
+  <section class="concept">
+    <p class="kicker">編曲のコンセプト</p>
+    <p>ドビュッシーの《月の光》は、題名を、ヴェルレーヌの同名の詩(1869年)からとっている。この詩では、仮面をつけた人々が、華やかな衣装の下で悲しげに歌う。その歌は月の光と溶け合い、噴水が涙を流す。仮面の下の悲しみは見えず、月の光と水の動きに現れる、とも読める。</p><p>そう読むと、同じ1860年代にモネが描いた《月光の下の船》(1864年頃)が重なる。この絵では、月が雲に隠れて見えない。水面に散る光の斑点と灯台の反射が、月がそこにあることを示唆している。詩も絵も、見えないものが水の揺れとして現れている。</p><p>月が見えない夜にも、水面にこぼれる光や水のゆらぎから、私たちは月を思い浮かべることができる。見えないものを想像する余地が、この曲と絵のなかに広がっている。この編曲では、その想像がはじまるような音を探したい。</p>
+  </section>
+  <nav class="next"><a href="../02-arabesque/">次の曲：2つのアラベスク 第1番</a></nav>
+</main>
+<script>
+  var a = document.querySelector('audio');
+  a.addEventListener('error', function () { a.hidden = true; document.querySelector('.missing').hidden = false; });
+</script>
+</body>
+</html>
